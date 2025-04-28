@@ -1,0 +1,179 @@
+<Page x:Class="FN.Framtal.Presentation._2025.Views.RSK0408_2View"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FN.Framtal.Presentation._2025.Views"
+      mc:Ignorable="d" 
+      Title="RSK0408_2View"
+      Height="Auto"
+      Width="1636"
+      Background="White"
+      >
+
+    <Grid Margin="0,0,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30.795"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        
+
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Disabled" Margin="0,0,10,0" Height="1699" VerticalAlignment="Top" Grid.Column="1">
+            <StackPanel Margin="26,0,10,0" Orientation="Vertical" Height="1610">
+                <Grid Margin="20, 0, 0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <!-- 20 rows for the entries + 1 for header -->
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    
+
+
+
+                    
+
+
+
+
+
+<Border Grid.Row="32" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="Trippi á 2.-4. vetri" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="21.000" TextAlignment="Right" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="3" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="4" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="5" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="6" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="7" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+<Border Grid.Row="32" Grid.Column="8" BorderBrush="Black" BorderThickness="1">
+    <TextBlock Text="" Padding="5"/>
+</Border>
+
+
+
+<Border Grid.Row="33" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Mismunur:" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="33" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Bústofsaukning" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="33" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Bústofskerðing" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="33" Grid.Column="3" BorderBrush="Black" BorderThickness="1">
+        <TextBlock TextWrapping="Wrap" Padding="5">
+            <Run Text="Bústofsaukning" FontWeight="Bold"/> 
+            <Run Text=" fer sem gjöld í línu 55 á bls. 3 en "/> 
+            <Run Text="bústofskerðing" FontWeight="Bold"/> 
+            <Run Text=" fer sem mínutala í sömu línu."/>
+        </TextBlock>
+    </Border>
+    
+    <!-- Data Row -->
+    <Border Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Samtals" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Samtals" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="Samtals" Padding="5" TextAlignment="Center"/>
+    </Border>
+    
+    <Border Grid.Row="1" Grid.Column="3" BorderBrush="Black" BorderThickness="1">
+        <TextBlock Text="" Padding="5"/>
+    </Border>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+                    
+
+
+
+
+                    
+                    <!--
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <TextBlock Grid.Row="19" Grid.Column="0" Text="19. Aðrar tekjur sbr. sundurliðunarákvæði" Margin="5"/>
+                    -->
+                </Grid>
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+</Page>
