@@ -1,58 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Frontend Mentor | Tip calculator app</title>
 
-    <title>Hello, world!</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+  <body class="font-mono">
+    <main class="min-h-screen flex flex-col items-center bg-grey-200 pt-[50px] gap-5 w-full lg:pt-20 lg:gap-11 pb-[50px]">
+      <img src="./images/logo.svg" alt="Splitter">
+      <div class="p-4 bg-white w-full rounded-t-lg flex flex-col gap-4 md:h-[800px] md:w-[608px] md:px-10 md:py-6 md:rounded-b-lg lg:h-[481px] lg:w-[920px] lg:flex-row lg:gap-6 lg:items-center lg:p-4">
+        <div class="flex flex-col gap-4 w-full lg:w-[379px]">
+          <div class="flex flex-col gap-1 w-full">
+            <h1 class="text-sm font-bold text-grey-500">
+              Bill
+            </h1>
+            <div class="flex bg-grey-50 rounded-sm py-1 px-2 w-full">
+              <!-- <img src="./images/icon-dollar.svg" alt="Icon" class="object-scale-down"> -->
+              <input type="number" id="bill" min="0" name="bill" class="w-full text-right text-lg font-bold text-green-900 focus:outline-none placeholder:text-grey-300" placeholder="0">
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h2 class="text-sm font-bold text-grey-500">
+              Select Tip %
+            </h2>
+            <div class="grid grid-cols-2 grid-rows-3 gap-2 md:grid-cols-3 md:grid-rows-2">
+              <button class="tip-button" data-percent="0.05">5%</button>
+              <button class="tip-button" data-percent="0.10">10%</button>
+              <button class="tip-button" data-percent="0.15">15%</button>
+              <button class="tip-button" data-percent="0.25">25%</button>
+              <button class="tip-button" data-percent="0.5">50%</button>
+              <input id="custom-tip" type="number" name="percent" min="0" max="100" placeholder="Custom" class="text-center rounded-sm bg-grey-50 text-lg font-bold text-green-900 focus:outline-none placeholder:text-grey-550">
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex justify-between">
+              <h2 class="text-sm font-bold text-grey-500">
+                Number of People
+              </h2>
+              <p id="people-warning" class="text-sm font-bold text-orange-400 hidden">
+                Can't be zero
+              </p>
+            </div>
+            <div id="people-container" class="flex bg-grey-50 rounded-sm py-1 px-2 justify-between">
+              <!-- <img src="./images/icon-person.svg" alt="Icon" class="object-scale-down"> -->
+              <input type="number" id="people" min="0" class="text-right w-full text-lg font-bold text-green-900 focus:outline-none placeholder:text-grey-300" placeholder="0">
+            </div>
           </div>
         </div>
-      </nav>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    
+        <div class="bg-green-900 text-white p-3 rounded-md flex flex-col gap-4 lg:p-4 lg:justify-between lg:w-[413px] lg:h-[417px]">
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-between items-center">
+              <div>
+                <h2 class="text-sm font-bold">
+                  Tip Amount
+                </h2>
+                <p class="text-xs font-bold text-grey-400">
+                  / person
+                </p>
+              </div>
+              <p id="tip-person" class="text-xl font-bold tracking-tight text-green-400 md:text-2xl md:tracking-tighter">$0.00</p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div>
+                <h2 class="text-sm font-bold">
+                  Total
+                </h2>
+                <p class="text-xs font-bold text-grey-400">
+                  / person
+                </p>
+              </div>
+              <p id="total-person" class="text-xl font-bold tracking-tight text-green-400 md:text-2xl md:tracking-tighter">$0.00</p>
+            </div>
+          </div>
+          <button id="reset" class="bg-green-750 rounded-sm px-4 py-1 text-base font-bold text-green-800 hover:bg-green-200">
+            Reset
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
   </body>
 </html>
